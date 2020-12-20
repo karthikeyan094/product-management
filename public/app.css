@@ -1,0 +1,117 @@
+.formheader {
+    text-align: center;
+    font-weight: 600;
+    font-family: 'crimson';
+    margin-bottom: 10px;
+}
+
+.label {
+    text-decoration: burlywood;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.submitbtn {
+    background-color: black;
+    display: block;
+    color: whitesmoke;
+    margin-top: auto;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: 45%;
+    margin-bottom: auto;
+    margin-top: 30px;
+}
+
+.button {
+    text-align: center;
+    align-content: center;
+}
+
+.formcontainer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.productlables {
+    font-size: 15px;
+    /* margin: 8px; */
+}
+
+.productname {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: black;
+    margin-top: 25px;
+}
+
+.productname:hover {
+    text-decoration: none;
+}
+
+.productform {
+    margin: 40px;
+}
+
+.morebtn:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.morebtn {
+    color: black;
+    margin-bottom: 30px;
+    color: white;
+    background-color: black;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.productconainer {
+    text-align: center;
+    margin: 160px;
+}
+
+.productborder {
+    border: solid black;
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+
+.spanitem {
+    margin: 5px;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+.productdate {
+    font-size: 10px;
+    margin-left: 1px;
+}
+
+.updatebtn {
+    margin-left: 100%;
+}
+
+.nextbtn {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.logoutbtn {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 7px;
+    margin-left: 40%;
+}
+
+.logoutheader {
+    margin-left: 38%;
+}

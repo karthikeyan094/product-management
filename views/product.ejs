@@ -1,0 +1,125 @@
+<%-  include('partials/header') %>
+
+
+
+
+    <div class="container ">
+        <div class="container " id="product1">
+
+            <%  product.forEach(function(product)  { %>
+                <div id="products">
+
+                    <p class="productname">
+                        <%= product.name %>
+                    </p>
+
+                    <span class="spanitem updatebtn">  
+                        <a href="<%= product._id %>/edit " class="morebtn"> update </a>
+                        </span>
+                    <span class="spanitem productdate">
+                            <%= product.date%>
+                                </span>
+
+                    <span class="spanitem">
+                         invoice no:
+                            <%= product.invoiceno %>
+                        </span>
+
+                    <span class="spanitem">
+                                used for :
+                                <%= product.usedfor %>
+                            </span>
+
+                    <span class="spanitem">
+                                    used by :
+                                    <%= product.usedby %>
+                                </span>
+                    <span class="spanitem">
+                                        purpose:
+                                        <%= product.purpose %>
+                                    </span>
+                    <span class="spanitem">
+                                            working condition :
+                                            <%= product.workingcondition %>
+                                        </span>
+                    <span class="spanitem">   cost :
+                                                <%= product.cost %>
+                                                </span>
+
+
+
+                    <hr>
+
+                    <% }) %>
+                </div>
+        </div>
+        <button class="nextbtn" type="button" onclick=" getpreviouse() ">Back </button>
+        <button class="nextbtn" type="button" onclick=" getnext() " style="float: right;"> Next </button>
+
+
+        <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script> -->
+        <script src='https://code.jquery.com/jquery-3.1.1.min.js '></script>
+        <script>
+            var start = 0;
+            var limit = 3;
+
+
+            function getnext() {
+                start = start + limit;
+                $.ajax({
+                    url: "/product/" + start + "/" + limit,
+                    method: "GET",
+                    success: function(response) {
+                        console.log(response);
+                        renderpost(response);
+
+                    }
+                })
+            }
+
+
+            function getpreviouse() {
+                start = start - limit;
+                $.ajax({
+                    url: "/product/" + start + "/" + limit,
+                    method: "GET",
+                    success: function(response) {
+                        console.log(response);
+                        renderpost(response);
+                    }
+                })
+            }
+
+
+            function renderpost(product) {
+
+                if (product.length > 0) {
+                    var html = " ";
+                    for (var a = 0; a < product.length; a++) {
+                        console.log(product[a].name);
+                        html += ' <p class="productname"> ' + product[a].name + ' </p> ';
+                        html += ' <span class = "spanitem updatebtn" > <a href = "/' + product[a]._id + '/edit "class = "morebtn " > update </a> </span > ';
+                        html += '<span class = "spanitem productdate" > ' + product[a].date + ' </span>  ';
+
+
+                        html += '   <span class = "spanitem" >invoice no:  ' + product[a].invoiceno + ' </span>';
+                        html += '<span class = "spanitem" > used for: ' + product[a].usedfor + ' </span> ';
+                        html += '<span class = "spanitem" >used by: ' + product[a].usedby + ' </span> ';
+                        html += '<span class = "spanitem" > purpose: ' + product[a].purpose + ' </span> ';
+                        html += '<span class = "spanitem" >working condition' + product[a].workingcondition + ' </span > ';
+                        html += ' <span class = "spanitem" > cost: ' + product[a].cost + ' </span>';
+                        html += '<hr>';
+                    }
+                    html += '<button class = "nextbtn" type = "button"  onclick = " getpreviouse() " > Back </button>';
+                    html += ' <button class = "nextbtn" type = "button" onclick = " getnext() " style = "float: right;" > Next </button>';
+
+
+                    $("#product1").html(html);
+                }
+
+            }
+        </script>
+
+
+    </div>
+    </div>

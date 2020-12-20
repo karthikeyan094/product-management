@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>loging out</title>
+    <link rel="stylesheet" href="app.css">
+    <script type="text/javascript">
+        function preventBack() {
+            window.history.forward();
+        }
+
+        setTimeout("preventBack()", 0);
+
+        window.onunload = function() {
+            null
+        };
+    </script>
+</head>
+
+<body>
+    <h3 class="logoutheader">CONFIRM LOG OUT</h3>
+    <hr />
+    <a href="/login" class="logoutbtn">Goto LOGIN Page</a>
+</body>
+
+</html>

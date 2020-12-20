@@ -1,0 +1,94 @@
+<%- include('partials/header')%>
+
+
+    <div class="container">
+        <div class="container formcontainer">
+            <h1 class="formheader" style="padding: 10px;">EDIT PRODUCT</h1>
+
+            <form action="/<%= product._id %>?_method=PUT" method="POST">
+                <div class="row">
+                    <div class="form-group col-6 ">
+                        <label class="label" for="product id">PRODUCT ID :</label>
+                        <input type="text" value="<%= product.productid %>" class="form-control" name="productid" id="productid" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label class="label" for="name">NAME :</label>
+                        <input type="text" value="<%= product.name %>" class="form-control" name="productname" id="productname" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label class="label" for="invoice no">INVOICE NO :</label>
+                        <input type="text" value="<%= product.invoiceno %>" class="form-control" name="invoiceno" id="invoiceno" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label class="label" for="date">DATE :</label>
+                        <input type="date" value="<%= product.date %>" class="form-control" name="date" id="date" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label class="label" for="invoice no">COST :</label>
+                        <input type="text" value="<%= product.cost %>" class="form-control" name="cost" id="cost" required>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <label class="label" for="used by">OWNER :</label>
+                        <select name="usedby" id="usedby" class="form-control">
+                     <option value= <%= product.usedby %> > <%= product.usedby %></option>
+                         </select>
+                    </div>
+
+
+                    <div class="form-group col-6">
+                        <label class="label" for="purpose">PURPOSE :</label>
+                        <input type="text" value="<%= product.purpose %>" class="form-control" name="purpose" id="purpose" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label class="label" for="working condition">WORKING CONDITION :</label>
+
+                        <div class="form-check col-6">
+                            <input value="good" type="radio" name="workingcondition" id="workingcondition1">
+                            <label class="form-check-label" for="workingcondition1">
+                          GOOD
+                        </label>
+                        </div>
+                        <div class="form-check ">
+                            <input value="bad" type="radio" name="workingcondition" id="workingcondition2">
+                            <label class="form-check-label" for="workingcondition2">
+                          BAD
+                        </label>
+                        </div>
+
+                    </div>
+                    <div class="form-group col-6">
+                        <label class="label" for="usedfor">USED FOR :</label>
+                        <div class="form-check">
+                            <input value="product" type="radio" name="usedfor" id="usedfor1">
+                            <label class="form-check-label" for="usedfor1">
+                          product
+                        </label>
+                        </div>
+                        <div class="form-check">
+                            <input value="service" type="radio" name="usedfor" id="usedfor2">
+                            <label class="form-check-label" for="usedfor2">
+                          service
+                        </label>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="button  align-middle">
+
+                    <input type="submit" class="submitbtn btn btn-dark align-middle">
+                </div>
+            </form>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+    </div>
