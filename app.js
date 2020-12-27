@@ -50,8 +50,8 @@ app.post("/login", function(req, res) {
         var email = req.body.email;
         var password = req.body.password;
         if (email == "karthikeyan@gmail.com" && password == "1234567") {
-            alert("successfully loged in")
-            res.redirect("/product")
+            alert("successfully logged in");
+            res.redirect("/product");
         } else {
             alert("email or password is wrong");
             res.redirect("/login");
@@ -59,9 +59,9 @@ app.post("/login", function(req, res) {
     })
     ////logout
 
-app.get("/logout", function(req, res) {
-    res.render("logout");
-})
+// app.get("/logout", function(req, res) {
+//     res.render("logout");
+// })
 
 //add employee
 

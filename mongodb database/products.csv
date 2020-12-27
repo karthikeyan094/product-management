@@ -1,0 +1,9 @@
+_id,productid,name,invoiceno,date,cost,usedby,usedfor,purpose,workingcondition
+5fdf6eff539bdf61c0b006c4,true,ASUS ,3566446,2020-11-04,86000,adi,product,GAMING,good
+5fdf6f1e539bdf61c0b006c5,2,MI 5 pro,23564,2020-12-23,16000,ravi,product,CALLING,good
+5fdf6f47539bdf61c0b006c6,3,HELMET,3566446,2020-09-17,3000,anandh,product,SAFETY,good
+5fdf6f64539bdf61c0b006c7,4,TABLE,436484,2020-06-16,1000,ravi,product,WRITTING,good
+5fdf6f88539bdf61c0b006c8,5,WALL CLOCK,23564,2020-08-05,1000,vijay,product,TIME ,good
+5fdf6fac539bdf61c0b006c9,6,SPOONE,3566446,2020-10-22,60,ravi,product,EATING,good
+5fdf6ff6539bdf61c0b006ca,7,FAN,23564,2020-12-29,2000,ravi,product,SWEAT CONTROLE,good
+5fe819e4d704fb2510712191,345,HELMET,436484,2020-12-22,3000,dhoni,product,safety,good
